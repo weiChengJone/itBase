@@ -38,18 +38,31 @@ public class Bird {
 		this.noise = noise;
 	}
 
-	public void showNoise(Bird bird){
+	private void showNoise(Bird bird){
 		System.out.println(bird.getNoise());
 	}
 	
-	public void showCategoty(Bird bird){
+	private void showCategoty(Bird bird){
 		System.out.println(bird.getCategory());
 	}
 	
 	public static void main(String[] args) {
+		
 		Bird bird = new Bird();
 		System.out.println(bird.getId());
 		System.out.println(bird.id);
-
+		bird.showCategoty(bird);
+		bird.showNoise(bird);
 	}
+	@Override
+	public String toString() {
+		return "Bird [id=" + id + ", category=" + category + ", noise=" + this.getNoise()
+				+ "]";
+	}
+	
+	
+	public void doSomeThing(Bird bird){
+		System.out.println(bird.toString());
+	}
+	
 }
