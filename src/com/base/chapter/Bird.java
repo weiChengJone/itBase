@@ -58,7 +58,20 @@ public class Bird {
 		Bird bird = new Bird();
 		System.out.println(bird.getId());
 		System.out.println(bird.id);
-
+		
+		bird.showCategoty(bird);
+		bird.showNoise(bird);
+	}
+	
+	@Override
+	public String toString() {
+		return "Bird [id=" + id + ", category=" + category + ", noise=" + this.getNoise()
+				+ "]";
+	}
+	
+	
+	public void doSomeThing(Bird bird){
+		System.out.println(bird.toString());
 		String s = "111";
 		String s2 = "111";
 
