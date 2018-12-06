@@ -2,7 +2,11 @@ package com.base.design.prototype;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * 原型模式测试
+ * @author yangweicheng
+ *
+ */
 public class TestProtoType {
 
 	public static void main(String[] args) {
