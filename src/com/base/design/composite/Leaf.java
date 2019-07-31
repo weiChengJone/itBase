@@ -24,7 +24,8 @@ public class Leaf implements Component {
 
 	@Override
 	public void operation(int i) {
-		String s = String.join("", Collections.nCopies(i, "-"));
+		//String s = String.join("", Collections.nCopies(i, "-"));
+		String s = "";
 		System.out.println(s+"业务方法");
 
 	}

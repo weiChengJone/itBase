@@ -26,7 +26,8 @@ public class Composite implements Component {
 
 	@Override
 	public void operation(int i) {
-		String s = String.join("", Collections.nCopies(i, "-"));
+		//String s = String.join("", Collections.nCopies(i, "-"));
+		String s = "";
 		System.out.println(s+"ÈÝÆ÷");
 		 for(Object obj:list){
 	            ((Component)obj).operation(i+2);

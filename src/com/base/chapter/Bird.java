@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Bird {
+public class Bird implements Cloneable,Comparable{
 	private String id;
 	private String category;
 	private String noise;
@@ -56,6 +56,11 @@ public class Bird {
 	
 	public static void main(String[] args) {
 		Bird bird = new Bird();
+		try {
+			bird.clone();
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
 		System.out.println(bird.getId());
 		System.out.println(bird.id);
 		
@@ -89,5 +94,17 @@ public class Bird {
 		System.out.println(map.get("1"));
 
 
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		if (o == null )
+		return 0;
+
+		Bird oBird = (Bird)o;
+		if(Integer.valueOf(this.getId()) > Integer.valueOf(oBird.getId())){
+			return 1;
+		}
+		return 0;
 	}
 }
